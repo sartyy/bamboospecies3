@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#035B03"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".MainActivity"> <!-- ✅ Ensures correct context -->
+
+    <!-- ✅ Header with logos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="University Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_university_logo_placeholder" /> <!-- ✅ Placeholder logo -->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="College Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_college_logo_placeholder" /> <!-- ✅ Placeholder logo -->
+    </LinearLayout>
+
+    <!-- ✅ App Name & School -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Pampanga State Agricultural University"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Bamboo Identifier"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- ✅ Spacer before buttons -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- ✅ Button Group -->
+    <LinearLayout
+        android:id="@+id/buttonsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- ✅ Top row with Import + Take Photo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/importImageButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:text="Import Image"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/takePhotoButton"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:text="Take a Photo"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- ✅ General Use Button -->
+        <Button
+            android:id="@+id/generalUse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/white"
+            android:text="General Use"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- ✅ User Manual Icon and Label -->
+    <LinearLayout
+        android:id="@+id/userManualLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="User Manual Icon"
+            android:src="@drawable/ic_user_manual_placeholder"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="User Manual"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
