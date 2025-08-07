@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        // ✅ Removed Chaquopy Maven repository
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.9.1"
+        // ✅ Removed Chaquopy classpath since we no longer use it
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.9.1' apply false
+    id 'com.android.library' version '8.9.1' apply false
+    // ✅ Removed: id 'com.chaquo.python' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
